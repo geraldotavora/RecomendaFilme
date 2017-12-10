@@ -103,7 +103,6 @@ public class FilmeDAO {
 				+ "ator_coadjuvante = ?, duracao = ?, nome_diretor = ?, data_lancamento = ? "
 				+ "WHERE id = ?;";
 		this.connection = new ConnectionFactory().getConnection();
-		
 		try {
 			PreparedStatement stmt = connection.prepareStatement(sql);
 			java.sql.Date sqlDate = new java.sql.Date(filme.getLancamento().getTime());
@@ -128,29 +127,22 @@ public class FilmeDAO {
 				e.printStackTrace();
 			}
 		}
-		
 		return false;
 	}
 	
 	public Filme getFilmeById(int id) {
 		String sql = "SELECT * FROM filme where id = ?";
-		
 		this.connection = new ConnectionFactory().getConnection();
-		
 		try {
 			PreparedStatement stmt = connection.prepareStatement(sql);
 			stmt.setInt(1, id);
-			
 			ResultSet rs = stmt.executeQuery();
 			rs.next();
-			
 			Filme filme = new Filme(id, rs.getString("nome"), rs.getString("genero"), 
 					rs.getString("ator_principal"), rs.getString("ator_coadjuvante"),
 					rs.getString("duracao"), rs.getString("nome_diretor"), rs.getDate("data_lancamento"));
-			
 			stmt.close();
 			return filme;
-			
 		}catch(SQLException e) {
 			System.err.println(e.getMessage());
 		}finally {

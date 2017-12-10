@@ -39,7 +39,7 @@ public class Main {
 				  
 		//	System.out.println(app_name);
 			//System.out.println("RecFlix");
-			System.out.println(	" оооооооооo                            ооооооoооооооo                       оооо                          \r\n" + 
+			System.out.println(	" oооооооооo                            ооооооoооооооo                       оооо                          \r\n" + 
 								" ооооооооооо                          оооооооооооооооo                                                    \r\n" + 
 								" оооо   оооо  oоооооооо    оооооооо   оооо  оооо ооооo   ооооооo  оооo  ооо oооо   оооооооо     ооооo     \r\n" + 
 								" оооо ооооо  oоооo  оооо  оооо   ооо  оооо  оооо ооооo  оооооооооо oоо  ооo oооо  ооо   оооо   ооооо     \r\n" + 
